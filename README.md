@@ -6,3 +6,4 @@
 - `aws ec2 describe-availability-zones --region us-east-1 --query "sort_by(AvailabilityZones, &ZoneId)[].{RegionName:RegionName,ZoneName:ZoneName,ZoneId:ZoneId}" --output table --color off` = check available AZ's in region with clearer output
 - `aws service-quotas list-service-quotas --service-code vpc` = list available quota
 - `aws service-quotas get-service-quota --service-code vpc --quota-code L-0FFFFFFF` = get service quota
+- `aws iam get-role --role-name ROLE_NAME --query 'Role.Arn'` = display IAM role ARN
