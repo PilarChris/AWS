@@ -9,3 +9,4 @@
 - `aws iam get-role --role-name ROLE_NAME --query 'Role.Arn'` = display IAM role ARN
 - `aws ec2 describe-instance-type-offerings --location-type "availability-zone" --filters "Name=location,Values=us-east-1f" "Name=instance-type,Values=c5a.8xlarge" --region us-east-1` = combine two filters and search instance type availibility in specified zone
 - [Search EC2 that use 'default' security group over all regions](https://github.com/Chri100pher/AWS/blob/c6c063e87d8a56cbaf49e8279b1e69dfe7fe9e87/ec2sgdefault.sh)
+- ![Python](https://img.shields.io/badge/-Python-000?&logo=python)[search default sg that are not used and can be deleted multi account and multi region](https://github.com/Chri100pher/AWS/blob/2f32c3e94b873cd2eb7bfde42abe2fbd99818378/search_default_sg.py)
