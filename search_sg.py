@@ -19,15 +19,12 @@ for account in aws_accounts:
 	for region in aws_regions['Regions']:
 		aws_region_name = region['RegionName']
 		ec2 = session.client('ec2', region_name=aws_region_name)
-		#print("Searching in region: ", aws_region_name)
 		for sg in sgs:
 			try:
 			    response = ec2.describe_security_groups(GroupIds=[sg])
 			    print('\x1b[6;30;42m' + sg + ' found in ' + session.region_name + ' under ' + session.profile_name + ' account ' + '\x1b[0m')
 			    counter = 0
 			except Exception as error:
-			    #print('\033[91m' + 'security group ' + sg + ' not found in ' + session.profile_name + '\033[0m')
-			    #print(error)
 			    counter += 1
 			    continue
 			finally:
